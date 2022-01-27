@@ -10,6 +10,15 @@ import { AdminComponent } from './components/admin/admin.component';
 import { AddbooksComponent } from './components/addbooks/addbooks.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BorrowformComponent } from './components/borrowform/borrowform.component';
+// import {MatStepperModule} from '@angular/material/stepper';
+// import { MatLineModule } from '@angular/material/core';
+// import { MatStepLabel } from '@angular/material/stepper';
+// import { MatIconModule } from '@angular/material/icon';
+// import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +28,20 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AdminComponent,
     AddbooksComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    BorrowformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    // MatStepperModule,
+    // MatLineModule,
+    // MatStepLabel,
+    // MatIconModule,
+    // FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
