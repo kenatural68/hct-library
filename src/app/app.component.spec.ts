@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'hct-library'`, () => {
+  it(`should have as title 'online-bookstore-poc'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('hct-library');
+    expect(app.title).toEqual('online-bookstore-poc');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('hct-library app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('online-bookstore-poc app is running!');
   });
 });

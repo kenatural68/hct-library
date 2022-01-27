@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hct-library';
+  title = 'online-bookstore-poc';
+  // active = 1;
 }
