@@ -13,6 +13,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BorrowformComponent } from './components/borrowform/borrowform.component';
+import { RequestsComponent } from './components/requests/requests.component';
+import { BorrowersComponent } from './components/borrowers/borrowers.component';
 // import {MatStepperModule} from '@angular/material/stepper';
 // import { MatLineModule } from '@angular/material/core';
 // import { MatStepLabel } from '@angular/material/stepper';
@@ -29,7 +31,9 @@ import { BorrowformComponent } from './components/borrowform/borrowform.componen
     AddbooksComponent,
     FooterComponent,
     DashboardComponent,
-    BorrowformComponent
+    BorrowformComponent,
+    RequestsComponent,
+    BorrowersComponent
   ],
   imports: [
     BrowserModule,
