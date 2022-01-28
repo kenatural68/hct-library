@@ -1,39 +1,66 @@
 <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
     {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-  </button>
+  </button> -->
   <mat-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
+    <mat-step [stepControl]="nameFormGroup">
+      <form [formGroup]="nameFormGroup">
         <ng-template matStepLabel>Fill out your name</ng-template>
         <mat-form-field appearance="fill">
           <mat-label>Name</mat-label>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+          <input matInput placeholder="First name Last name" formControlName="nameCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button class="btn btn-primary btn-sm" matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
+    <mat-step [stepControl]="addressFormGroup" label="Fill out your address">
+      <form [formGroup]="addressFormGroup">
         <mat-form-field appearance="fill">
           <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+          <input matInput formControlName="addressCtrl" placeholder="Ex. 15 Main St., Loyola Heights, Quezon City"
                  required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button class="btn btn-outline-primary btn-sm" matStepperPrevious>Previous</button>&nbsp;
+          <button mat-button class="btn btn-primary btn-sm" matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="numFormGroup" label="Fill out your contact number">
+      <form [formGroup]="numFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Contact No.</mat-label>
+          <input matInput formControlName="numCtrl" placeholder="09981234567" maxlength="11"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button class="btn btn-outline-primary btn-sm" matStepperPrevious>Previous</button>&nbsp;
+          <button mat-button class="btn btn-primary btn-sm" matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="dateFormGroup" label="Choose return date">
+      <form [formGroup]="dateFormGroup">
+        <mat-form-field>
+          <mat-label>Choose return date</mat-label>
+          <input matInput formControlName="dateCtrl" [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>        
+        <div>
+          <button mat-button class="btn btn-outline-primary btn-sm" matStepperPrevious>Previous</button>&nbsp;
+          <button mat-button class="btn btn-primary btn-sm" matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
-      <p>You are now done.</p>
+      <p>You are now done!</p>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button class="btn btn-outline-primary btn-sm" matStepperPrevious>Back</button>&nbsp;
+        <button mat-button class="btn btn-success btn-sm" (click)="openDialog()">Submit</button>
       </div>
     </mat-step>
   </mat-stepper>
-   -->
+  

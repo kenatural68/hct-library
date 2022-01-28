@@ -1,7 +1,25 @@
-<app-dashboard></app-dashboard>
+<!-- <app-dashboard></app-dashboard> -->
 <div class="container">
   <div style="height: 40px;"></div>
   <h1 class="display-1">Biblioteca</h1>
+  <!-- <button (click)="topFunction()" id="myBtn" title="Go to top">Top</button> -->
+
+  <!-- <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Categories</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" class="btn btn-primary btn-sm" mat-button (click)="drawer.toggle()">
+        Biblioteca
+      </button>
+    </div>
+  
+  </mat-drawer-container> -->
 
 <form class="form-inline waves-light" mdbWavesEffect>
   <div class="md-form mt-0">
@@ -20,7 +38,7 @@
       <div class="card-body">
         <h3 class="card-title">The Old Man and The Sea</h3>
         <h5>Ernest Hemmingway</h5>
-        <p><button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/bookinfo']">Borrow</button></p>
+        <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
       </div>
       <div class="card-footer">
         <small class="text-muted">3 stocks left</small>
@@ -31,7 +49,7 @@
       <div class="card-body">
         <h3 class="card-title">Holes</h3>
         <h5>Louis Sachar</h5>
-          <!-- <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p> -->
+          <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
       </div>
       <div class="card-footer">
         <small class="text-muted">5 stocks left</small>
@@ -42,25 +60,23 @@
       <div class="card-body">
         <h3 class="card-title">Harry Potter and the Deathly Hallows</h3>
         <h5>J.K. Rowling</h5>
-          <p><button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/bookinfo']">Borrow</button></p>
+        <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
       </div>
       <div class="card-footer">
         <small class="text-muted">1 stock left</small>
       </div>
     </div>
   </div>
+
   <div style="height: 30px;"></div>
+
   <div class="card-deck">
     <div class="card">
       <img class="card-img-top" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1334416842l/830502.jpg" alt="it">
       <div class="card-body">
         <h3 class="card-title">IT</h3>
         <h5>Stephen King</h5>
-        <p class="card-text">Welcome to Derry, Maine ...
-          <br><br>
-          It’s a small city, a place as hauntingly familiar as your own hometown. 
-          Only in Derry the haunting is real ...</p>
-          <p><button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/bookinfo']">Borrow</button></p>
+        <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
       </div>
       <div class="card-footer">
         <small class="text-muted">Available 3/06/2022</small>
@@ -71,10 +87,10 @@
       <div class="card-body">
         <h3 class="card-title">The Shining</h3>
         <h5>Stephen King</h5>
-        <p class="card-text">The Shining is a 1977 horror novel by American author Stephen King. 
+        <!-- <p class="card-text">The Shining is a 1977 horror novel by American author Stephen King. 
           It is King's third published novel and first hardback bestseller; its success firmly 
-          established King as a preeminent author in the horror genre. </p>
-          <p><button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/bookinfo']">Borrow</button></p>
+          established King as a preeminent author in the horror genre. </p> -->
+          <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
       </div>
       <div class="card-footer">
         <small class="text-muted">Available 3/08/2022</small>
@@ -85,10 +101,10 @@
       <div class="card-body">
         <h3 class="card-title">Harry Potter and The Sorcerrer's Stone</h3>
         <h5>J.K. Rowling</h5>
-        <p class="card-text">Harry Potter's life is miserable. His parents are dead and he's stuck with his heartless relatives, 
+        <!-- <p class="card-text">Harry Potter's life is miserable. His parents are dead and he's stuck with his heartless relatives, 
           who force him to live in a tiny closet under the stairs. But his fortune changes when he receives a letter that tells
-           him the truth about himself: he's a wizard.</p>
-          <p><button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/bookinfo']">Borrow</button></p>
+           him the truth about himself: he's a wizard.</p> -->
+           <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
       </div>
       <div class="card-footer">
         <small class="text-muted">No stocks Available</small>

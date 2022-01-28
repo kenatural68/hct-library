@@ -15,11 +15,17 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BorrowformComponent } from './components/borrowform/borrowform.component';
 import { RequestsComponent } from './components/requests/requests.component';
 import { BorrowersComponent } from './components/borrowers/borrowers.component';
-// import {MatStepperModule} from '@angular/material/stepper';
-// import { MatLineModule } from '@angular/material/core';
-// import { MatStepLabel } from '@angular/material/stepper';
-// import { MatIconModule } from '@angular/material/icon';
-// import { FormsModule } from '@angular/forms';
+import {MatStepperModule} from '@angular/material/stepper';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+import { ConfirmtextComponent } from './components/confirmtext/confirmtext.component';
 
 
 @NgModule({
@@ -33,7 +39,8 @@ import { BorrowersComponent } from './components/borrowers/borrowers.component';
     DashboardComponent,
     BorrowformComponent,
     RequestsComponent,
-    BorrowersComponent
+    BorrowersComponent,
+    ConfirmtextComponent
   ],
   imports: [
     BrowserModule,
@@ -41,11 +48,17 @@ import { BorrowersComponent } from './components/borrowers/borrowers.component';
     NgbModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    // MatStepperModule,
-    // MatLineModule,
-    // MatStepLabel,
-    // MatIconModule,
-    // FormsModule
+    MatStepperModule,
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSidenavModule,
+    MatTabsModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
