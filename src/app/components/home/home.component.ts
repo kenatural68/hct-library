@@ -31,9 +31,9 @@ export class HomeComponent implements OnInit {
   //   this.mybutton.style.display = "none";
   // }
 
-  // topFunction() {
-  //   document.body.scrollTop = 0;
-  //   document.documentElement.scrollTop = 0;
-  // }
+  topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 
 }

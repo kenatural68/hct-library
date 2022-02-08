@@ -5,11 +5,11 @@
     <form>
         <div class="form-group">
             <label for="uploadPdf">Upload Thumbnail</label>
-            <input type="file" class="form-control-file" id="uploadPdf">
+            <input type="file" class="form-control-file" id="uploadImg" accept="image/png, image/jpeg">
           </div>
         <div class="form-group">
           <label for="bookname">Title</label>
-          <input type="text" class="form-control" id="bookname" placeholder="Book title">
+          <input type="text" class="form-control" id="bookname" placeholder="Book title" value="" #book>
         </div>
         <div class="form-group">
           <label for="bookauthor">Author</label>
@@ -37,10 +37,10 @@
         <br>
         <div class="form-group">
             <label for="bookauthor">Number of books</label>
-            <input type="number" class="form-control" id="bookauthor" placeholder="Stocks">
+            <input type="number" class="form-control" id="bookauthor" placeholder="Stocks" min="1">
         </div>
           <br>
-          <a role="button" class="btn btn-primary" [routerLink]="['/admin']" (click)="onClick()">
+          <a role="button" class="btn btn-primary" [routerLink]="['/admin']" (click)="onClick(book.value)">
            Add Book
           </a>
           <app-footer></app-footer>

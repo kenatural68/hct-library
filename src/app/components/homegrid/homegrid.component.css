@@ -1,0 +1,45 @@
+/* .wrapper {
+    display: grid;
+    background: lightblue;
+    grid-template-areas:
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b"
+    "a a a b b b b b b b b";
+    grid-template-columns: 80px 200px;
+  }
+
+.sidebar{
+    grid-area: a;
+    text-align: left;
+}
+
+.home{
+    grid-area: b;
+    background: red;
+    text-align: right;
+}
+   */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-gap: 10px;
+    /* background-color: #f5e4ca; */
+  }
+  
+.grid-container > div {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .sidebar{
+      margin-top: 100%;
+  }

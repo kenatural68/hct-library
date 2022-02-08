@@ -26,6 +26,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ConfirmtextComponent } from './components/confirmtext/confirmtext.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { HomegridComponent } from './components/homegrid/homegrid.component';
+import {MatListModule} from '@angular/material/list';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HistoryComponent } from './components/history/history.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+// import {MatTable} from '@angular/material/table';
 
 
 @NgModule({
@@ -40,7 +47,10 @@ import { ConfirmtextComponent } from './components/confirmtext/confirmtext.compo
     BorrowformComponent,
     RequestsComponent,
     BorrowersComponent,
-    ConfirmtextComponent
+    ConfirmtextComponent,
+    HomegridComponent,
+    SidebarComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +69,10 @@ import { ConfirmtextComponent } from './components/confirmtext/confirmtext.compo
     MatDatepickerModule,
     MatSelectModule,
     MatNativeDateModule,
+    MatGridListModule,
+    MatListModule,
+    MatSnackBarModule,
+    // MatTable,
   ],
   providers: [],
   bootstrap: [AppComponent]
