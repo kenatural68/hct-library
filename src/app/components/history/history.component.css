@@ -1,4 +1,14 @@
 .center{
-    inline-size: 1000px;
+    /* inline-size: 1000px; */
     padding-left: 300px;
+}
+
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+.mat-expansion-panel {
+    margin-left: 100px; 
+    margin-right: 100px; 
+    margin-bottom: 5px;
 }

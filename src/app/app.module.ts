@@ -32,7 +32,9 @@ import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HistoryComponent } from './components/history/history.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-// import {MatTable} from '@angular/material/table';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCard, MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -72,7 +74,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatGridListModule,
     MatListModule,
     MatSnackBarModule,
-    // MatTable,
+    MatExpansionModule,
+    MatCardModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
