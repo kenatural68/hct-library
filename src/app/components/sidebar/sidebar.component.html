@@ -1,7 +1,35 @@
-<mat-selection-list #shoes>
-  <mat-list-option *ngFor="let genre of genres">
-    {{genre.viewValue}}
+<!-- <mat-selection-list #genres>
+  <mat-list-option *ngFor="let genre of typesOfGenres" [value]="genre" (click)="filterGenre(genres.value)">
+    {{genre}}
   </mat-list-option>
 </mat-selection-list>
+<p> {{genres.selectedOptions.selected[0]?.value}} </p> -->
 
-<!-- <p><button type="button" class="btn btn-primary btn-sm">Filter</button></p> -->
+<!-- <mat-selection-list>
+  <mat-list-option (click)="filterGenre(genres0.value)" #genres0 value="action">Action</mat-list-option>
+  <mat-list-option (click)="filterGenre(genres1.value)" #genres1 value="adventure">Adventure</mat-list-option>
+  <mat-list-option (click)="filterGenre(genres2.value)" #genres2 value="biography">Biography</mat-list-option>
+  <mat-list-option (click)="filterGenre(genres3.value)" #genres3 value="fantasy">Fantasy</mat-list-option>
+  <mat-list-option (click)="filterGenre(genres4.value)" #genres4 value="horror">Horror</mat-list-option>
+  <mat-list-option (click)="filterGenre(genres5.value)" #genres5 value="sciencefiction">Science Fiction</mat-list-option>
+</mat-selection-list> -->
+
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button (click)="filterGenre(genres0.value)" #genres0 value="action">Action</mat-radio-button>
+  <mat-radio-button (click)="filterGenre(genres1.value)" #genres1 value="adventure">Adventure</mat-radio-button>
+  <mat-radio-button (click)="filterGenre(genres2.value)" #genres2 value="biography">Biography</mat-radio-button>
+  <mat-radio-button (click)="filterGenre(genres3.value)" #genres3 value="fantasy">Fantasy</mat-radio-button>
+  <mat-radio-button (click)="filterGenre(genres4.value)" #genres4 value="horror">Horror</mat-radio-button>
+  <mat-radio-button (click)="filterGenre(genres5.value)" #genres5 value="sci-fi">Science Fiction</mat-radio-button>
+</mat-radio-group>
+
+<!-- <mat-selection-list>
+  <mat-list-option #genres value="action">Action</mat-list-option>
+  <mat-list-option #genres value="adventure">Adventure</mat-list-option>
+  <mat-list-option #genres value="biography">Biography</mat-list-option>
+  <mat-list-option #genres value="fantasy">Fantasy</mat-list-option>
+  <mat-list-option #genres value="horror">Horror</mat-list-option>
+  <mat-list-option #genres value="sciencefiction">Science Fiction</mat-list-option>
+</mat-selection-list> -->
+
+<!-- <p><button type="button" class="btn btn-primary btn-sm" (click)="filterGenre(genres.value)">Filter</button></p> -->

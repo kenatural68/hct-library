@@ -10,6 +10,7 @@ export class HomegridComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("homegrid loaded");
   }
 
 }

@@ -1,9 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-interface Genre {
-  value: string;
-  viewValue: string;
-}
+// export class Genre {
+//   constructor(
+//     public id: number,
+//     public genre: string,
+//     public stock: number
+//   ) {
+//   }
+// }
 
 @Component({
   selector: 'app-sidebar',
@@ -12,18 +17,34 @@ interface Genre {
 })
 export class SidebarComponent implements OnInit {
 
-  genres: Genre[] = [
-    {value: 'adventure-0', viewValue: 'Adventure'},
-    {value: 'action-1', viewValue: 'Action'},
-    {value: 'biography-2', viewValue: 'Biography'},
-    {value: 'fantasy-3', viewValue: 'Fantasy'},
-    {value: 'horror-4', viewValue: 'Horror'},
-    {value: 'scifi-1', viewValue: 'Science Fiction'},
-  ];
+  // genre: string;
 
-  constructor() { }
+  @Output() genreEvent = new EventEmitter<string>();
+
+  // genres: Genre[];
+
+  // genres: any
+
+  typesOfGenres: string[] = ['Action', 'Adventure', 'Biography', 'Fantasy', 'Horror', 'Science Fiction'];
+
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+    // this.getGenre();
+  }
+
+  // getGenre(){
+  //   this.httpClient.get<any>('https://mocki.io/v1/54c3ce46-e4ac-4870-b8c6-3626ba4fe673').subscribe(
+  //     response => {
+  //       console.log(response, "Genres loaded");
+  //       this.genres = response;
+  //     }
+  //   );
+  // }
+
+  filterGenre(genres: string){
+    console.log(genres);
+    this.genreEvent.emit(genres)
   }
 
 }

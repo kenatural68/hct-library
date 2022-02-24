@@ -15,5 +15,23 @@
         </div>
         <button type="submit" class="btn btn-primary" [routerLink]="['/dashboard']">Login</button>
       </form>
+
+      <!-- <form #loginPage="ngForm" name="loginPage" method="post" (ngSubmit)="signIn(loginPage.value)">
+        <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+        <div>
+          <p>Username: </p>
+          <input type="text" class="form-control" name="username" required [(ngModel)]="username"> <br> 
+        </div>
+        <div>
+          <p>Password: </p>
+          <input type="password" class="form-control" required name="password" [(ngModel)]="password"> <br>
+        </div>
+        <div class="buttons">
+          <button class="btn btn-secondary" style="margin-right:20px" mat-dialog-close>Cancel</button>
+          <button class="btn btn-primary">Log In</button> -->
+          <!-- <button type="submit" class="btn btn-primary" mat-dialog-close routerLink="/dashboard">Log In</button> -->
+        <!-- </div>
+      </form> -->
+
   </div>
 </div>

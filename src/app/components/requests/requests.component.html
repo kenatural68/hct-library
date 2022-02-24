@@ -41,7 +41,7 @@
     </div>
 </div> -->
 
-    <table mat-table [dataSource]="myTable" class="mat-elevation-z8">
+    <!-- <table mat-table [dataSource]="myTable" class="mat-elevation-z8">
 
         <ng-container matColumnDef="position">
           <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -73,6 +73,32 @@
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
+      </table> -->
+
+
+      <div class="container">
+        <table class="table table-bordered table-striped">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Book</th>
+            <th>Contact Number</th>
+            <th>Return date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let borrow of borrows">
+            <td><span>{{borrow.name}}</span></td>
+            <td><span>{{borrow.book}}</span></td>
+            <td><span>{{borrow.contact}}</span></td>
+            <td><span>{{borrow.returndate}}</span></td>
+            <td>
+                <button class="btn btn-sm btn-success" (click)="onClickAccept()">Accept</button>&nbsp;
+                <button class="btn btn-sm btn-danger" (click)="onClickDecline()">Decline</button>
+              </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
       
     

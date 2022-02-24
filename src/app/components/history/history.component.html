@@ -34,31 +34,18 @@
           </ul> -->
           <mat-card>
           <mat-accordion>
-            <mat-expansion-panel>
+            <mat-expansion-panel *ngFor="let history of historys">
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                  Rinoa Heartilly
+                  {{history.name}}
                 </mat-panel-title>
                 <mat-panel-description>
-                Twilight
+                {{history.book}}
                 </mat-panel-description>
               </mat-expansion-panel-header>
-              <p>Borrowed: December 1, 2019</p>
-              <p>Due Date: December 9, 2019</p>
-              <p>Returned: December 12, 2019</p>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Sephiroth
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    IT
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-                <p>Borrowed: December 1, 2019</p>
-              <p>Due Date: December 9, 2019</p>
-              <p>Returned: December 12, 2019</p>
+              <p>Date Borrowed: {{history.borrowdate}}</p>
+              <p>Due Date: {{history.duedate}}</p>
+              <p>Returned on {{history.returndate}}</p>
             </mat-expansion-panel>
           </mat-accordion>
           </mat-card>

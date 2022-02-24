@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService } from './in-memory-data.service';
+import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +39,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCard, MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -52,9 +57,10 @@ import {MatTableModule} from '@angular/material/table';
     ConfirmtextComponent,
     HomegridComponent,
     SidebarComponent,
-    HistoryComponent
+    HistoryComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
@@ -77,6 +83,11 @@ import {MatTableModule} from '@angular/material/table';
     MatExpansionModule,
     MatCardModule,
     MatTableModule,
+    AmplifyAuthenticatorModule,
+    MatRadioModule,
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // )
   ],
   providers: [],
   bootstrap: [AppComponent]

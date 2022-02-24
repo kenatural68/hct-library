@@ -7,6 +7,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 // import { RequestsComponent } from './components/requests/requests.component';
 // import { BorrowersComponent } from './components/borrowers/borrowers.component';
 import { HomegridComponent } from './components/homegrid/homegrid.component';
+// import { Book, BookinfoComponent } from './components/bookinfo/bookinfo.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'admin'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'admin', pathMatch: 'full', component: AdminComponent},
   // {path: 'addbooks', component: AddbooksComponent},
   {path: 'dashboard', pathMatch: 'full', component: DashboardComponent},
+  // {path: 'book', component: BookinfoComponent},
   // {path: 'requests', component: RequestsComponent},
   // {path: 'borrowers', component: BorrowersComponent}
   {path: '**', redirectTo: 'home'}

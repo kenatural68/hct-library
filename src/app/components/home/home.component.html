@@ -1,118 +1,56 @@
 <!-- <app-dashboard></app-dashboard> -->
 <div class="container">
+
   <div style="height: 40px;"></div>
-  <h1 class="display-1">Biblioteca</h1>
+
+  <h1 class="display-1">HCT Library</h1>
   <button class="btn btn-primary" (click)="topFunction()" id="myBtn" title="Go to top">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
     </svg>
   </button>
 
-  <!-- <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Categories</p>
-      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Toggle extra text
-      </button>
-    </mat-drawer>
-  
-    <div class="example-sidenav-content">
-      <button type="button" class="btn btn-primary btn-sm" mat-button (click)="drawer.toggle()">
-        Biblioteca
-      </button>
+  <form class="form-inline waves-light" mdbWavesEffect>
+    <div class="md-form mt-0">
+      <input class="form-control mr-lg-2" type="text" placeholder="Search" #toFind>
     </div>
-  
-  </mat-drawer-container> -->
+    <button type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg></button>
+  </form>
 
-<form class="form-inline waves-light" mdbWavesEffect>
-  <div class="md-form mt-0">
-    <input class="form-control mr-lg-2" type="text" placeholder="Search">
-  </div>
-  <button type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-  </svg></button>
-</form>
-
-<div style="height: 40px;"></div>
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630572642l/2165._SY475_.jpg"
-      alt="The Old Man and the Sea">
-      <div class="card-body">
-        <h3 class="card-title">The Old Man and The Sea</h3>
-        <h5>Ernest Hemmingway</h5>
-        <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">3 stocks left</small>
-      </div>
+  <!-- <form class="form-inline waves-light" mdbWavesEffect>
+    <div class="md-form mt-0">
+      <input class="form-control mr-lg-2" type="text" placeholder="Search" #toFind>
     </div>
-    <div class="card">
-      <img class="card-img-top" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328336001l/11339278.jpg" alt="Holes">
-      <div class="card-body">
-        <h3 class="card-title">Holes</h3>
-        <h5>Louis Sachar</h5>
+    <button type="submit" class="btn btn-primary" (click)="searchBook(toFind.value)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg></button>
+  </form> -->
+
+  <!-- <form class="form-inline waves-light" mdbWavesEffect><button type="button" class="btn btn-primary btn-sm" (click)="getBook()">Reset</button></form> -->
+
+  <div style="height: 40px;"></div>
+
+  <div class="card mb-3" style="max-width: 800px;" *ngFor="let book of books">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{book.imageLink}}" class="img-fluid rounded-start" alt="{{book.title}}">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">{{book.title}}</h1>
+          <h3 class="card-text">{{book.author}}</h3>
           <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">5 stocks left</small>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/71sH3vxziLL.jpg" alt="Harry Potter and the Deathly Hallows">
-      <div class="card-body">
-        <h3 class="card-title">Harry Potter and the Deathly Hallows</h3>
-        <h5>J.K. Rowling</h5>
-        <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">1 stock left</small>
+          <!-- <p class="card-text"><small class="text-muted">{{book.stock}} stocks left</small></p> -->
+        </div>
       </div>
     </div>
-  </div>
-
-  <div style="height: 30px;"></div>
-
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1334416842l/830502.jpg" alt="it">
-      <div class="card-body">
-        <h3 class="card-title">IT</h3>
-        <h5>Stephen King</h5>
-        <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Available 3/06/2022</small>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="https://kbimages1-a.akamaihd.net/1aeb37f7-e24a-458f-85ad-4122cb9b902e/1200/1200/False/the-shining-1.jpg" alt="The Shining">
-      <div class="card-body">
-        <h3 class="card-title">The Shining</h3>
-        <h5>Stephen King</h5>
-        <!-- <p class="card-text">The Shining is a 1977 horror novel by American author Stephen King. 
-          It is King's third published novel and first hardback bestseller; its success firmly 
-          established King as a preeminent author in the horror genre. </p> -->
-          <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Available 3/08/2022</small>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474154022l/3._SY475_.jpg" alt="Harry Potter and The Sorcerrer's Stone">
-      <div class="card-body">
-        <h3 class="card-title">Harry Potter and The Sorcerrer's Stone</h3>
-        <h5>J.K. Rowling</h5>
-        <!-- <p class="card-text">Harry Potter's life is miserable. His parents are dead and he's stuck with his heartless relatives, 
-          who force him to live in a tiny closet under the stairs. But his fortune changes when he receives a letter that tells
-           him the truth about himself: he's a wizard.</p> -->
-           <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="openBorrowform()">Borrow</button></p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">No stocks Available</small>
-      </div>
+    <div class="card-footer">
+      <small class="text-muted">{{book.stock}} stocks left</small>
     </div>
   </div>
 </div>
+
+<app-sidebar (genreEvent)="receiveGenre($event)"></app-sidebar>
+
